@@ -23,3 +23,20 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
+// Force l'affichage des conteneurs de réseaux sociaux sur mobile
+.social-links, div[style*="display: flex"] {
+  display: flex !important;
+  visibility: visible !important;
+}
+
+// Assure que les SVG ne sont pas réduits à 0 pixel sur petit écran
+svg {
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-block;
+}
+
+// Supprime toute restriction de Quartz sur les liens dans la page d'accueil
+.center-content {
+  overflow: visible !important;
+}
