@@ -1,42 +1,64 @@
 @use "./base.scss";
 
-// Suppression globale des icônes de liens (anchor links) à côté des titres
+/* --- 1. NETTOYAGE VISUEL (Minimalisme) --- */
+
+// Supprime les icônes "lien" (hash) à côté des titres
 .hash-link {
   display: none !important;
 }
 
-// Suppression des icônes de liens externes (les petites flèches)
+// Supprime la petite flèche automatique sur les liens externes
 a.external > svg {
   display: none !important;
 }
 
-// Suppression du soulignement des liens d'images (pour ton avatar)
+// Supprime le soulignement et le fond gris sur les liens qui contiennent des images (ton avatar)
 a:has(img) {
   background-color: transparent !important;
   background-image: none !important;
+  text-decoration: none !important;
 }
 
-// Optionnel : Pour un centrage parfait des titres sans décalage invisible
+// Empêche les liens de titres d'être cliquables ou visibles (pour H1, H2, etc.)
 h1, h2, h3, h4, h5, h6 {
   & > a {
     visibility: hidden;
     display: none;
   }
 }
-// Force l'affichage des conteneurs de réseaux sociaux sur mobile
-.social-links, div[style*="display: flex"] {
+
+/* --- 2. GESTION DES RÉSEAUX SOCIAUX (La classe .social-links) --- */
+
+// On cible spécifiquement la div que nous avons créée dans index.md
+.social-links {
   display: flex !important;
   visibility: visible !important;
-}
-
-// Assure que les SVG ne sont pas réduits à 0 pixel sur petit écran
-svg {
-  min-width: 24px;
-  min-height: 24px;
-  display: inline-block;
-}
-
-// Supprime toute restriction de Quartz sur les liens dans la page d'accueil
-.center-content {
+  justify-content: center;
+  align-items: center;
+  
+  // On s'assure que le contenu ne déborde pas sur mobile
   overflow: visible !important;
+}
+
+// On réactive l'affichage des SVG UNIQUEMENT à l'intérieur de .social-links
+.social-links a,
+.social-links a.external {
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+
+  // Configuration précise des icônes SVG
+  svg {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 24px !important; // Taille fixe
+    height: 24px !important;
+    min-width: 24px !important; // Empêche l'écrasement sur mobile
+    fill: currentColor !important; // S'adapte au mode sombre/clair
+  }
 }
