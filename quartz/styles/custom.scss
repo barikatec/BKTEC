@@ -7,7 +7,7 @@
   display: none !important;
 }
 
-// Supprime la petite flèche automatique sur les liens externes
+// Supprime la petite flèche automatique sur les liens externes PARTOUT sur le site par défaut
 a.external > svg {
   display: none !important;
 }
@@ -35,14 +35,11 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible !important;
   justify-content: center;
   align-items: center;
-  
-  // On s'assure que le contenu ne déborde pas sur mobile
   overflow: visible !important;
 }
 
-// On réactive l'affichage des SVG UNIQUEMENT à l'intérieur de .social-links
-.social-links a,
-.social-links a.external {
+// Configuration des liens sociaux
+.social-links a {
   background: none !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -50,15 +47,26 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   text-decoration: none !important;
+}
 
-  // Configuration précise des icônes SVG
-  svg {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 24px !important; // Taille fixe
-    height: 24px !important;
-    min-width: 24px !important; // Empêche l'écrasement sur mobile
-    fill: currentColor !important; // S'adapte au mode sombre/clair
-  }
+/* C'est ICI que se jouait le conflit.
+   On force l'affichage de TES logos, mais on cache explicitement la flèche Quartz.
+*/
+
+// 1. On affiche tes logos (SVG sans classe particulière ou juste svg)
+.social-links a svg {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 24px !important; 
+  height: 24px !important;
+  min-width: 24px !important;
+  fill: currentColor !important;
+}
+
+// 2. On CACHE spécifiquement la petite flèche de Quartz (qui a la classe .external-icon)
+.social-links a svg.external-icon {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
