@@ -1,25 +1,30 @@
 @use "./base.scss";
 
-/* --- 1. NETTOYAGE VISUEL (Minimalisme) --- */
+/* --- 1. NETTOYAGE VISUEL GLOBAL --- */
+
+// Cache le pied de page (Footer) sur tout le site
+footer {
+  display: none !important;
+}
 
 // Supprime les icônes "lien" (hash) à côté des titres
 .hash-link {
   display: none !important;
 }
 
-// Supprime la petite flèche automatique sur les liens externes PARTOUT sur le site par défaut
+// Supprime les petites flèches automatiques sur les liens externes partout
 a.external > svg {
   display: none !important;
 }
 
-// Supprime le soulignement et le fond gris sur les liens qui contiennent des images (ton avatar)
+// Nettoye les liens qui contiennent des images (ton avatar)
 a:has(img) {
   background-color: transparent !important;
   background-image: none !important;
   text-decoration: none !important;
 }
 
-// Empêche les liens de titres d'être cliquables ou visibles (pour H1, H2, etc.)
+// Empêche les titres d'être cliquables (H1, H2, etc.)
 h1, h2, h3, h4, h5, h6 {
   & > a {
     visibility: hidden;
@@ -27,9 +32,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* --- 2. GESTION DES RÉSEAUX SOCIAUX (La classe .social-links) --- */
+/* --- 2. GESTION DES RÉSEAUX SOCIAUX --- */
 
-// On cible spécifiquement la div que nous avons créée dans index.md
+// Cible le conteneur des réseaux sociaux
 .social-links {
   display: flex !important;
   visibility: visible !important;
@@ -38,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: visible !important;
 }
 
-// Configuration des liens sociaux
+// Configuration des liens (X, GitHub...)
 .social-links a {
   background: none !important;
   padding: 0 !important;
@@ -47,13 +52,13 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   text-decoration: none !important;
+  
+  // C'est cette ligne qui enlève le soulignement indésirable
+  box-shadow: none !important; 
+  border: none !important;
 }
 
-/* C'est ICI que se jouait le conflit.
-   On force l'affichage de TES logos, mais on cache explicitement la flèche Quartz.
-*/
-
-// 1. On affiche tes logos (SVG sans classe particulière ou juste svg)
+// Force l'affichage de TES logos SVG
 .social-links a svg {
   display: inline-block !important;
   visibility: visible !important;
@@ -64,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   fill: currentColor !important;
 }
 
-// 2. On CACHE spécifiquement la petite flèche de Quartz (qui a la classe .external-icon)
+// Cache la petite flèche parasite de Quartz SI elle apparaît dans tes icônes
 .social-links a svg.external-icon {
   display: none !important;
   width: 0 !important;
