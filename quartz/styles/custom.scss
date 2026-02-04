@@ -1,3 +1,25 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Suppression globale des icônes de liens (anchor links) à côté des titres
+.hash-link {
+  display: none !important;
+}
+
+// Suppression des icônes de liens externes (les petites flèches)
+a.external > svg {
+  display: none !important;
+}
+
+// Suppression du soulignement des liens d'images (pour ton avatar)
+a:has(img) {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+// Optionnel : Pour un centrage parfait des titres sans décalage invisible
+h1, h2, h3, h4, h5, h6 {
+  & > a {
+    visibility: hidden;
+    display: none;
+  }
+}
