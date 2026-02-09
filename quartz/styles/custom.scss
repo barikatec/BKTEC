@@ -75,3 +75,44 @@ h1, h2, h3, h4, h5, h6 {
   width: 0 !important;
   height: 0 !important;
 }
+
+/* --- GALERIE DE PROJETS --- */
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Colonnes automatiques responsive */
+  gap: 20px; /* Espace entre les images */
+  margin-top: 2rem;
+}
+
+/* Le style de l'image qui sert de lien */
+.project-gallery a {
+  border: none !important;
+  text-decoration: none !important;
+  transition: transform 0.2s ease;
+  display: block; /* Important pour que tout le bloc soit cliquable */
+}
+
+/* Effet de zoom au survol */
+.project-gallery a:hover {
+  transform: translateY(-5px); /* Monte légèrement */
+}
+
+/* L'image elle-même */
+.project-gallery img {
+  width: 100%;
+  height: 200px; /* Hauteur fixe pour que tout soit aligné */
+  object-fit: cover; /* Recadre l'image proprement sans la déformer */
+  border-radius: 12px; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Légère ombre */
+  margin: 0 !important;
+}
+
+/* Le titre sous l'image (optionnel) */
+.project-title {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+  color: var(--dark); /* Utilise la couleur du thème */
+}
