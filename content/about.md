@@ -11,7 +11,7 @@ From cooking to crypto, passing by the mountains and through the ocean, I don't 
 **Barikatec** what does it stands for ?
 Barika was the name of a village I heard about when I was very young. A place where my father grew up a part of his childhood. This was a long time ago and, I have never been able to talk about it with him. In french, Barika sounds like "Barrel of", it was the perfect match and I still love it a lot. Barikatec, a barrel of tech or just an home for all the things that I have been curious to dig in.
 
-[[content/my garden/index|My digital garden 🌾]] 
+[[my garden/index|My digital garden 🌾]]  
 The original idea on how I constructed this site is largely inspired by [kepano](https://x.com/kepano), more details in My Garden.
 
 **AI or not AI**
