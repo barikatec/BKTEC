@@ -5,17 +5,7 @@ One of my first project with the help of AI. Started the work on this because I 
 - it has been cool to work on it and learn
 #### How to try it ?
 just clink on that link: https://igpx.netlify.app/
-
-<div style="text-align: center; margin: 4rem 0 2rem 0; color: #888;">
-  <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">
-    Technical details
-  </p>
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="12" y1="5" x2="12" y2="19"></line>
-    <polyline points="19 12 12 19 5 12"></polyline>
-  </svg>
-</div>
-### **The app that finally gets you away from your computer.**
+### The app that finally gets you away from your computer.
 
 Visualize your GPX tracks, analyze elevation profiles, overlay map layers (OSM / IGN), and export professional, to-scale "Atlas" PDFs.
 
