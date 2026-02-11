@@ -28,7 +28,7 @@ Want to reach out ? Just contact me on [X](https://x.com/BarikaTec)!
     </a>
   </div>
 <div style="text-align: center; margin-top: 3rem; display: flex; flex-direction: column; align-items: center; width: 100%;">
-  <img src="attachments/me.png" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 2px solid #eee; margin-bottom: 1rem;">
+  <img src="attachments/me.png" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #eee; margin-bottom: 1rem;">
   <h1 style="margin: 0; font-size: 2.5rem; font-weight: 700; border: none;">BarikaTec</h1>
   </div>
   
